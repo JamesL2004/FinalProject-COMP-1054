@@ -1,0 +1,505 @@
+/*Light Blue: #1a1aff
+Black: #0e0e0e
+White: #f4f4f4
+Navy Blue: #000099*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Mono', monospace;
+}
+a,li{
+    font-family: 'Kanit', sans-serif;
+}
+p{
+    font-family: 'Titillium Web', sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+            "header header header header"
+            "masthead masthead masthead masthead"
+            "main main main main"
+            "footer footer footer footer";
+}
+header{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #f4f4f4;
+    grid-area: header;
+}
+header div{
+    flex-grow: 1;
+    height: 100%;
+}
+header div a img{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    padding-left: 10px;
+}
+menu{
+    display: flex;
+    list-style: none;
+}
+menu li{
+    border-right: solid 2px #000099;
+    padding: 0px 20px;
+}
+menu li:last-of-type{
+    border-right: none;
+}
+menu li a{
+    color: #0e0e0e;
+    font-size: 25px;
+    text-decoration: none;
+}
+menu li a:hover{
+    text-decoration: underline;
+    color: #1a1aff;
+    transition: ease-in .35s;
+}
+main{
+    grid-area: main;
+}
+footer{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #0e0e0e;
+    grid-area: footer;
+}
+footer div{
+    flex-grow: 1;
+    height: 100%;
+}
+footer div a img{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    padding-left: 10px;
+}
+footer .contact-info{
+    display: flex;
+    position: relative;
+    left: -450px;
+    display: flex;
+    height: 80%;
+    width: 50%;
+    color: #f4f4f4;
+}
+footer .contact-info .customer-service{
+    margin-left: 30px;
+}
+footer .footer-links{
+    display: flex;
+    position: relative;
+    right: -100px;
+    height: 80%;
+    width: 50%;
+    padding-right: 15px;
+}
+footer .footer-links a{
+    padding: 25px;
+    text-decoration: none;
+    color: #f4f4f4;
+}
+footer .footer-links a:hover{
+    text-decoration: underline;
+}
+/*Home Page CSS------------------------------------------------------------------------------------------------------------------------------------------------*/
+.index-masthead{
+    grid-area: masthead;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/index-masthead.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.index-masthead div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.index-masthead div h1{
+    padding-left: 30px;
+    position: absolute;
+    bottom: -120px;
+    color: #f4f4f4;
+    font-size: 5.5em; 
+}
+.home-section1{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/home-img1.jpg");
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.home-section1 div:nth-child(1){
+    padding: 25px;
+    border: solid 4px #f4f4f4;
+}
+.home-section1 div:nth-child(1) > h2,
+.home-section1 div:nth-child(1) > p{
+    text-shadow: 2px 2px 8px #0e0e0e;
+    color: #f4f4f4;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.home-section1 .btn{
+    margin-top: 10px;
+    padding: 15px;
+    border: solid 4px #f4f4f4;
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: ease-in .25s;
+    font-family: 'Kanit', sans-serif;
+}
+.home-section1 .btn:hover{
+    background-color: #f4f4f4;
+    border: solid 4px #e6e6e6;
+    color: #0e0e0e;
+    cursor: pointer;
+}
+.home-section2{
+    display: flex;
+    background-image: url("../img/home-img2.jpg");
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+}
+.home-section2 #textbox-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 30%;
+    padding: 25px;
+    margin-left: 35px;
+    margin-top: 75px;
+    border-left: solid 3px #1a1aff;
+    height: 30%;
+}
+.home-section2 #textbox-1 h3{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.home-section2 #textbox-1 p{
+    line-height: 27px;
+}
+.home-section2 #textbox-1 h3,
+.home-section2 #textbox-1 p{
+    text-align: left;
+    color: #f4f4f4;
+}
+.home-section2 #textbox-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 30%;
+    padding: 25px;
+    margin-right: 35px;
+    margin-top: 425px;
+    margin-left: 565px;
+    border-right: solid 3px #1a1aff;
+    height: 30%;
+}
+.home-section2 #textbox-2 h3{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.home-section2 #textbox-2 p{
+    line-height: 27px;
+}
+.home-section2 #textbox-2 h3,
+.home-section2 #textbox-2 p{
+    text-align: right;
+    color: #f4f4f4;
+}
+/*About Us Page CSS------------------------------------------------------------------------------------------------------------------------------------------------*/
+.about-us-masthead{
+    grid-area: masthead;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/about-us-masthead.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.about-us-masthead div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.about-us-masthead div h1{
+    padding-left: 30px;
+    position: absolute;
+    bottom: -120px;
+    color: #f4f4f4;
+    font-size: 5.5em; 
+}
+.about-us-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/about-us-top-img.gif");
+    background-size: cover;
+}
+.about-us-top div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 75px;
+    border: solid 4px #f4f4f4;
+    border-radius: 45px;
+}
+.about-us-top div h3,
+.about-us-top div p{
+    text-align: center;
+    color: #f4f4f4;
+}
+.about-us-top div h3{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.about-us-top div p{
+    font-size: 1.1em;
+    line-height: 30px;
+}
+.middle{
+    display: flex;
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+.middle #img-container{
+    padding: 15px;
+}
+.middle #img-container img{
+    border: solid 3px #1a1aff;
+}
+.middle #text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 40%;
+    height: 20%;
+    padding-left: 20px;
+    border-left: solid 3px #1a1aff;
+    margin-top: 150px;
+    margin-left: 150px;
+    line-height: 30px;
+}
+.middle #text-container h4{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.middle #text-container p{
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+/*Product Page CSS------------------------------------------------------------------------------------------------------------------------------------------------*/
+.product-masthead{
+    grid-area: masthead;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/product-masthead.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.product-masthead div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.product-masthead div h1{
+    padding-left: 30px;
+    position: absolute;
+    bottom: -120px;
+    color: #f4f4f4;
+    font-size: 5.5em; 
+}
+.top{
+    margin: 20px;
+    border: solid 2px #1a1aff;
+    border-radius: 100px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.top div{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+}
+.top div:nth-child(1),
+.top div:nth-child(2){
+    border-right: solid 2px #000099;
+    height: 30%;
+}
+.top div i{
+    color: #1a1aff;
+    font-size: 100px;
+}
+.top div p{
+    padding-top: 35px;
+    font-size: 1.1em;
+    border-bottom: solid 2px #1a1aff;
+    text-align: center;
+}
+.basic-bundle{
+    background-image: url("../img/product-img1.jpg");
+    background-size: cover;
+    height: 120vh;
+    display: flex;
+    background-color: #f4f4f4;
+}
+.basic-bundle .container{
+    margin-top: 60px;
+    margin-left: 90px;
+    border-left: solid 2px #1a1aff;
+    height: 40%;
+} 
+.basic-bundle .container div h3{
+    font-size: 1.5em;
+}
+.basic-bundle .container .text-container{
+    width: 40%;
+    height: 70%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.basic-bundle .container .text-container ul{
+    padding-left: 8px;
+}
+.basic-bundle .container .text-container .line1{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+.basic-bundle .container .text-container .price{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.basic-bundle .container .text-container .btn1{
+    padding: 15px;
+    margin-left: 2px;
+    margin-top: 15px;
+    width: 30%;
+    background-color: #1a1aff;
+    border-radius: 10px;
+}
+.basic-bundle .container:nth-child(1) .text-container .btn1:hover{
+    background-color: #0000e6;
+}
+.basic-bundle .container:nth-child(1) .text-container .btn1 p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*Contact Us Page CSS------------------------------------------------------------------------------------------------------------------------------------------------*/
+.contact-us-masthead{
+    grid-area: masthead;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/contact-us-masthead.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.contact-us-masthead div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.contact-us-masthead div h1{
+    padding-left: 30px;
+    position: absolute;
+    bottom: -120px;
+    color: #f4f4f4;
+    font-size: 5.5em; 
+}
+  .form-container{
+    width: 100%;
+    height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  form > h2{
+    color: #0e0e0e;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  form input, form textarea{
+    border: 0;
+    margin: 10px 0px;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+  }
+  form button{
+    padding: 15px;
+    background: #f5f5f5;
+    color: #0e0e0e;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px
+  }
+  form button:hover{
+    transition: ease .25s;
+    background: #e6e6e6;
+  }
+  /*Responsive CSS------------------------------------------------------------------------------------------------------------------------------------------------*/
+  @media screen and (min-width: 1440px){
+    footer div a img{
+        width: 20%;
+    }
+    footer .contact-info{
+        margin-left: 25px;
+        width: 60%;
+    }
+    .home-section2{
+        background-position: center;
+    }
+    .home-section1{
+        background-size: cover;
+    }
+    .about-us-masthead{
+        background-position: center;
+    }
+    .basic-bundle{
+        background-position: center;
+    }
+  }
